@@ -5,6 +5,7 @@ mod disjoint;
 mod entry;
 mod iter;
 mod mutable;
+mod reorder;
 mod slice;
 
 pub mod raw_entry_v1;
@@ -26,6 +27,7 @@ pub use self::iter::{
 pub use self::mutable::MutableEntryKey;
 pub use self::mutable::MutableKeys;
 pub use self::raw_entry_v1::RawEntryApiV1;
+pub use self::reorder::{MoveOp, ReorderError, ReorderPlan};
 pub use self::slice::Slice;
 
 #[cfg(feature = "rayon")]

@@ -1,5 +1,15 @@
 # Releases
 
+## Pending
+
+- Add `IndexMap::reorder_plan` and `IndexMap::apply_reorder_plan`, which
+  compute and execute a minimal sequence of `move_index` operations (a
+  `map::ReorderPlan` of `map::MoveOp` steps) that transforms the map's key
+  order into a given target order. Planning validates that the target is a
+  permutation of the current keys and is read-only; applying verifies a
+  fingerprint of the original key order and rejects stale plans with
+  `map::ReorderError::StalePlan`.
+
 ## 2.14.2 (2026-09-04)
 
 - Fix item hygiene in map and set macros. Previously, an internal `const CAP`
