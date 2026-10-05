@@ -118,6 +118,7 @@ mod sval;
 mod util;
 
 pub mod map;
+pub mod merge;
 pub mod set;
 
 // Placed after `map` and `set` so new `rayon` methods on the types
@@ -126,6 +127,7 @@ pub mod set;
 mod rayon;
 
 pub use crate::map::IndexMap;
+pub use crate::merge::{merge_ordered, MergeError};
 pub use crate::set::IndexSet;
 pub use equivalent::Equivalent;
 
