@@ -4,6 +4,7 @@
 mod disjoint;
 mod entry;
 mod iter;
+mod merge;
 mod mutable;
 mod slice;
 
@@ -17,6 +18,7 @@ pub mod serde_seq;
 mod tests;
 
 pub use self::entry::{Entry, IndexedEntry};
+pub use self::merge::{MergeError, Merger};
 pub use crate::inner::{OccupiedEntry, VacantEntry};
 
 pub use self::iter::{
