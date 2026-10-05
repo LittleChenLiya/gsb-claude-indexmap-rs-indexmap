@@ -4,6 +4,7 @@
 mod disjoint;
 mod entry;
 mod iter;
+mod move_plan;
 mod mutable;
 mod slice;
 
@@ -23,6 +24,7 @@ pub use self::iter::{
     Drain, ExtractIf, IntoIter, IntoKeys, IntoValues, Iter, IterMut, IterMut2, Keys, Splice,
     Values, ValuesMut,
 };
+pub use self::move_plan::{Move, MovePlan, PlanError};
 pub use self::mutable::MutableEntryKey;
 pub use self::mutable::MutableKeys;
 pub use self::raw_entry_v1::RawEntryApiV1;
